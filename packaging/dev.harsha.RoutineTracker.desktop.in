@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Routine Tracker
+Comment=Follow and log your daily timetable
+Exec=python3 -m routine_tracker
+Path=@ROOT@
+Icon=dev.harsha.RoutineTracker
+Categories=Utility;
+StartupWMClass=dev.harsha.RoutineTracker

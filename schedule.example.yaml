@@ -1,0 +1,42 @@
+# Template: copy to schedule.yaml and edit (times are 24h and must be quoted); schedule.yaml is gitignored.
+review_at: "21:30"
+
+# Daily targets; leave weight_kg / calories empty until you pick them.
+goals:
+  steps: 8000
+  sleep_hours: 7.5
+  water_l: 2.5
+  calories:
+  weight_kg:
+
+# Which block categories feed the Fitness and Study pages (Routine always covers every block).
+sections:
+  fitness: [Health]
+  study: [Study, Claude]
+
+day_types:
+  weekday:
+    days: [mon, tue, wed, thu, fri]
+    blocks:
+      - {key: wake, name: Wake up, start: "06:00", end: "06:30", category: Routine}
+      - {key: study_1, name: Study, start: "06:30", end: "08:00", category: Study}
+      - {key: walk, name: Walk, start: "08:00", end: "08:30", category: Health}
+      - {key: study_2, name: Study, start: "09:00", end: "10:00", category: Study}
+      - {key: work, name: Work, start: "10:00", end: "18:00", category: Work}
+      - {key: exercise, name: Exercise, start: "18:00", end: "19:00", category: Health}
+      - {key: dinner, name: Dinner, start: "19:30", end: "20:00", category: Meals}
+      - {key: claude, name: Claude, start: "20:30", end: "21:30", category: Claude, detail: "Ask Claude something, log what you asked"}
+      - {key: wind_down, name: Wind down, start: "21:30", end: "22:00", category: Routine, detail: "Your evening checklist"}
+      - {key: sleep, name: Sleep, start: "22:00", end: "22:59", category: Sleep, detail: "In bed by 22:00"}
+
+  weekend:
+    days: [sat, sun]
+    blocks:
+      - {key: wake, name: Wake up, start: "07:00", end: "07:30", category: Routine}
+      - {key: study_1, name: Study, start: "07:30", end: "09:30", category: Study}
+      - {key: walk, name: Walk, start: "09:30", end: "10:00", category: Health}
+      - {key: lunch, name: Lunch, start: "12:30", end: "13:30", category: Meals}
+      - {key: study_2, name: Study, start: "14:00", end: "17:00", category: Study}
+      - {key: free, name: Free time, start: "17:00", end: "21:00", category: Rest, scored: false}
+      - {key: wind_down, name: Wind down, start: "21:00", end: "21:30", category: Routine}
+      - {key: sleep, name: Sleep, start: "22:00", end: "22:59", category: Sleep}
